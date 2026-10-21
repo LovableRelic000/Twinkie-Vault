@@ -7,7 +7,9 @@ export interface Tumbler {
   isUnlocked: boolean;
 }
 
-export type GameStatus = 'ready' | 'playing' | 'cleared' | 'gameover';
+export type Difficulty = 'easy' | 'normal' | 'hard';
+
+export type GameStatus = 'start' | 'ready' | 'playing' | 'cleared' | 'gameover';
 
 export interface GameStats {
   safesCracked: number;

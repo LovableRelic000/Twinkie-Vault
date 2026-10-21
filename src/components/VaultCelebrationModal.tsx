@@ -7,6 +7,7 @@ interface VaultCelebrationModalProps {
   level: number;
   bonusTime: number;
   twinkiesAwarded: number;
+  lifetimeTwinkies: number;
   onNextLevel: () => void;
 }
 
@@ -14,6 +15,7 @@ export const VaultCelebrationModal: React.FC<VaultCelebrationModalProps> = ({
   level,
   bonusTime,
   twinkiesAwarded,
+  lifetimeTwinkies,
   onNextLevel,
 }) => {
   useEffect(() => {
@@ -48,9 +50,12 @@ export const VaultCelebrationModal: React.FC<VaultCelebrationModalProps> = ({
         <span className="text-xs font-black text-amber-300 tracking-wide">
           +{twinkiesAwarded} GOLDEN TWINKIES!
         </span>
+        <span className="text-[10px] font-mono font-bold text-amber-200">
+          ✨ Lifetime: {lifetimeTwinkies} Twinkies
+        </span>
         <div className="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-emerald-400">
           <Clock className="w-3 h-3" />
-          <span>+{bonusTime}s Time Bonus</span>
+          <span>+{bonusTime}s Fresh Vault Timer</span>
         </div>
       </div>
 

@@ -1,14 +1,16 @@
 package com.twinkievault.game;
 
 import android.os.Bundle;
-import android.view.InputDevice;
 import android.view.MotionEvent;
+import android.webkit.WebView;
 import com.getcapacitor.BridgeActivity;
 
 public class MainActivity extends BridgeActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Enable Chrome remote debugging on watch
+        WebView.setWebContentsDebuggingEnabled(true);
     }
 
     @Override
